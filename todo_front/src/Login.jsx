@@ -1,12 +1,14 @@
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "./context/AuthContext";
 
 export default function Login() {
     const [email,setEmail]=useState('');
     const [err,setErr]=useState('')
     const [pwd,setPwd]=useState('')
     const navigate=useNavigate();
+    const {login}=useContext(AuthContext)
     const add = async (e) =>{
         e.preventDefault();
         try{
@@ -14,8 +16,7 @@ export default function Login() {
             email,password:pwd
         })
         console.log(res);
-        
-        localStorage.setItem('token',res.data.token)
+        login(res.data.user,res.data.token)
         navigate('/')
         }catch(err){
             setErr(err.response.data.message)

@@ -4,10 +4,12 @@ import Home from "./ProtectedRoute/Home";
 import Form from "./ProtectedRoute/Form";
 import Login from "./Login";
 import ProtectedRoute from "./ProtectedRoute";
+import { AuthProider } from "./context/AuthContext";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <AuthProider>
+      <BrowserRouter>
       <Routes>
         <Route path="/register" element={<Register />} />
         <Route path="/Login" element={<Login />} />
@@ -19,5 +21,7 @@ export default function App() {
         
       </Routes>
     </BrowserRouter>
+    </AuthProider>
+    
   )
 }
