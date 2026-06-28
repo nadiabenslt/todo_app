@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import api from "./services/api"
+import api from "./../services/api"
 
 export default function Home() {
     const [tasks,setTasks]=useState([])
@@ -12,7 +12,9 @@ export default function Home() {
     },[])
     const logout= (e)=>{
         e.preventDefault();
+        localStorage.clear();
             api.post('/logout')
+            
             navigate('/Login')
     }
     // axios.get('http://127.0.0.1:8000/api/tasks')

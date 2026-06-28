@@ -33,7 +33,7 @@ export default function Register() {
 <label htmlFor="password">password:</label>
 <input type="password" name="password" onChange={e=>setPwd(e.target.value)} placeholder="password" /><br />
 <button type="submit">register</button>
-<button type="submit"> <Link to='/Loginx'  >Loginx</Link></button>
+<button type="submit"> <Link to='/Login'>Login</Link></button>
 
     </form>
     </>
