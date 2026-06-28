@@ -1,0 +1,8 @@
+todo_front/node_modules
+todo_front/dist
+
+todo_back/vendor
+todo_back/node_modules
+todo_back/.env
+
+.DS_Store
