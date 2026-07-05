@@ -24,19 +24,28 @@ export default function Register() {
         }
         
   return (
-    <>
-    <form onSubmit={add}>
-<label htmlFor="name">name:</label>
-<input type="text" name="name" onChange={e=>setName(e.target.value)} placeholder="name" /><br />
-<label htmlFor="email">email:</label>
-<input type="email" name="email" onChange={e=>setEmail(e.target.value)} placeholder="email" /><br />
-<label htmlFor="password">password:</label>
-<input type="password" name="password" onChange={e=>setPwd(e.target.value)} placeholder="password" /><br />
-<button type="submit">register</button>
-<button type="submit"> <Link to='/Login'>Login</Link></button>
+    <div className="card">
+      <p className="page-title">Create account</p>
+      <p className="page-subtitle">Join us — it's free</p>
 
-    </form>
-    </>
-
+      <form onSubmit={add}>
+        <div className="field">
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="name" onChange={e=>setName(e.target.value)} placeholder="Your name" />
+        </div>
+        <div className="field">
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" name="email" onChange={e=>setEmail(e.target.value)} placeholder="you@example.com" />
+        </div>
+        <div className="field">
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" name="password" onChange={e=>setPwd(e.target.value)} placeholder="••••••••" />
+        </div>
+        <button type="submit">Register</button>
+        <button type="button" className="btn-secondary">
+          <Link to='/Login'>Already have an account?</Link>
+        </button>
+      </form>
+    </div>
   )
 }

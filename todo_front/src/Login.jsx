@@ -23,17 +23,27 @@ export default function Login() {
         }
         
     }
-  return <>
+  return (
+    <div className="card">
+      <p className="page-title">Welcome back</p>
+      <p className="page-subtitle">Sign in to your account</p>
 
-    <form onSubmit={add}>
-        <label htmlFor="email">email:</label>
-        <input type="email" name="email" onChange={e=>setEmail(e.target.value)} placeholder="email" /><br />
-        <label htmlFor="password">password:</label>
-        <input type="password" name="password" onChange={e=>setPwd(e.target.value)} placeholder="password" /><br />
-        <button type="submit">Login</button>
-        <button type="submit"> <Link to='/Register'  >register</Link></button>
-    </form>
-    {err?<p>{err}</p>:<p></p>}
+      <form onSubmit={add}>
+        <div className="field">
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" name="email" onChange={e=>setEmail(e.target.value)} placeholder="you@example.com" />
+        </div>
+        <div className="field">
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" name="password" onChange={e=>setPwd(e.target.value)} placeholder="••••••••" />
+        </div>
+        <button type="submit">Sign In</button>
+        <button type="button" className="btn-secondary">
+          <Link to='/Register'>Create an account</Link>
+        </button>
+      </form>
 
-  </>
+      {err ? <p className="error-msg" style={{marginTop:'14px'}}>{err}</p> : null}
+    </div>
+  )
 }

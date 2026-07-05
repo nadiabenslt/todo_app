@@ -20,17 +20,25 @@ export default function Form() {
         }
     }
   return (
-    <>
-    <h2>add task:</h2>
-    <form onSubmit={add}>
-        <label htmlFor="title">Title:</label>
-        <input type="text" name="title" onChange={e=>setTitle(e.target.value)} /><br />
-        <label htmlFor="description">Description:</label>
-        <input type="text" name="description" onChange={e=>setDesc(e.target.value)} /><br />
-        <label htmlFor="date">Date:</label>
-        <input type="date" name="date" onChange={e=>setDate(e.target.value)} /><br />
-        <button type="submit">Add</button>
-    </form>
-    </>
+    <div className="card">
+      <p className="page-title">New Task</p>
+      <p className="page-subtitle">Fill in the details below</p>
+
+      <form onSubmit={add}>
+        <div className="field">
+          <label htmlFor="title">Title</label>
+          <input type="text" id="title" name="title" onChange={e=>setTitle(e.target.value)} placeholder="Task title" />
+        </div>
+        <div className="field">
+          <label htmlFor="description">Description</label>
+          <input type="text" id="description" name="description" onChange={e=>setDesc(e.target.value)} placeholder="Short description" />
+        </div>
+        <div className="field">
+          <label htmlFor="date">Due Date</label>
+          <input type="date" id="date" name="date" onChange={e=>setDate(e.target.value)} />
+        </div>
+        <button type="submit">Add Task</button>
+      </form>
+    </div>
   )
 }
