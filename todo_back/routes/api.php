@@ -10,5 +10,9 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('/tasks', [TaskController::class, 'index']);
     Route::post('/tasks', [TaskController::class, 'store']);
+    Route::put('/tasks/modifiy/{id}', [TaskController::class, 'modifiy']);
+    Route::delete('/tasks/remove/{id}', [TaskController::class, 'remove']);
+    Route::get('/tasks/{id}', [TaskController::class, 'getById']);
+    Route::put('/tasks/{id}/statut', [TaskController::class, 'statutTask']);
     Route::post('/logout',[UserController::class,'logout']);
 });
