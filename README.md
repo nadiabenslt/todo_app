@@ -228,11 +228,11 @@ todo_app/
 
 | Light Theme Dashboard | Dark Theme Dashboard |
 | :---: | :---: |
-| ![Light Theme Dashboard](screenshots/Light__Theme__Dashboard.png) | ![Dark Theme Dashboard](screenshots/Dark__Theme__Dashboard.png) |
+| ![Light Theme Dashboard](screenshots/Light_Theme_Dashboard.png) | ![Dark Theme Dashboard](screenshots/Dark_Theme_Dashboard.png) |
 
 | Filter Panel Controls | Task Actions & Inline Status Dropdowns |
 | :---: | :---: |
-| ![Filter Controls](screenshots/Search__and__Date__Range__Filters.png) | ![Task Actions](screenshots/Inline__Status__Badge__Selects.png) |
+| ![Filter Controls](screenshots/Search_and_Date_Range_Filters.png) | ![Task Actions](screenshots/Inline_Status_Badge_Selects.png) |
 
 ---
 
